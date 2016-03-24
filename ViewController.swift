@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     
     var operand1: String = ""
     var operand2: String = ""
-    var operator: String = ""
+    var perator: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()

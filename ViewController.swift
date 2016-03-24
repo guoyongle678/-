@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     
     var operand1: String = ""
     var operand2: String = ""
-    var perator: String = ""
+    var opeRator: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,12 +29,12 @@ class ViewController: UIViewController {
     @IBAction func didClicked(sender: UIButton) {
         let value = sender.currentTitle
         if value == "+"||value == "-"||value == "*"||value == "/" {
-          operator = value
+          opeRator = value
             return
         }
         else if value == "=" {
             var result = 0
-            switch operator {
+            switch opeRator {
                 case "+":
                     result = operand1.toInt()! + operand2.toInt()!
                 case "-":
@@ -49,7 +49,7 @@ class ViewController: UIViewController {
             resultLatel.text = "\(result)"
             return
 }
-        if operator == ""  {
+        if opeRator == ""  {
 
             operand1 = operand1 + value
             resultLabel.text = operand1

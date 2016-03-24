@@ -12,8 +12,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var resultLabel: UILabel!
     
-    var operand1: String = ""
-    var operand2: String = ""
+    var opeRand1: String = ""
+    var opeRand2: String = ""
     var opeRator: String = ""
     
     override func viewDidLoad() {
@@ -36,13 +36,13 @@ class ViewController: UIViewController {
             var result = 0
             switch opeRator {
                 case "+":
-                    result = operand1.toInt()! + operand2.toInt()!
+                    result = opeRand1.toInt()! + opeRand2.toInt()!
                 case "-":
-                    result = operand1.toInt()! - operand2.toInt()!
+                    result = opeRand1.toInt()! - opeRand2.toInt()!
                 case "*":
-                    result = operand1.toInt()! * operand2.toInt()!
+                    result = opeRand1.toInt()! * opeRand2.toInt()!
                 case "/":
-                    result = operand1.toInt()! / operand2.toInt()!
+                    result = opeRand1.toInt()! / opeRand2.toInt()!
                 default:
                         result = 0
     }
@@ -51,13 +51,13 @@ class ViewController: UIViewController {
 }
         if opeRator == ""  {
 
-            operand1 = operand1 + value
-            resultLabel.text = operand1
+            opeRand1 = opeRand1 + value
+            resultLabel.text = opeRand1
 }
         else {
             
-            operand2 = operand2 + value
-            resultLabel.text = operand2
+            opeRand2 = opeRand2 + value
+            resultLabel.text = opeRand2
 
             }
     }

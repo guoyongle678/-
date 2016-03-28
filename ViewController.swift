@@ -14,51 +14,63 @@ class ViewController: UIViewController {
     
     var opeRand1: String = ""
     var opeRand2: String = ""
-    var opeRator: String = ""
+    var opeRand3: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose o额外任务也特人生观回复f any resources that can be recreated.
+  
     }
  
     @IBAction func didClicked(sender: UIButton) {
         let value = sender.currentTitle
         if value == "+"||value == "-"||value == "*"||value == "/" {
-          opeRator = value
+          opeRand3 = value!
             return
         }
         else if value == "=" {
             var result = 0
-            switch opeRator {
-                case "+":
-                    result = opeRand1.toInt()! + opeRand2.toInt()!
-                case "-":
-                    result = opeRand1.toInt()! - opeRand2.toInt()!
-                case "*":
-                    result = opeRand1.toInt()! * opeRand2.toInt()!
-                case "/":
-                    result = opeRand1.toInt()! / opeRand2.toInt()!
-                default:
-                        result = 0
-    }
-            resultLatel.text = "\(result)"
+            switch opeRand3{
+            case "+":
+                    result = Int(opeRand1)! + Int(opeRand2)!
+            case "-":
+                    result = Int(opeRand1)! - Int(opeRand2)!
+            case "*":
+                    result = Int(opeRand1)! * Int(opeRand2)!
+            case "/":
+                    result = Int(opeRand1)! / Int(opeRand2)!
+            default:
+                result = 0
+                }
+            resultLabel.text = "\(result)"
             return
 }
-        if opeRator == ""  {
+        else if value == "AC"{
+            value = "0"
+            opeRand1 = ""
+            opeRand2 = ""
+            opeRand3 = ""
+            resultLabel.text = ""
+            return
+        }
+        if opeRand3 == ""  {
 
-            opeRand1 = opeRand1 + value
+            opeRand1 = opeRand1 + value!
             resultLabel.text = opeRand1
-}
+            }
         else {
-            
-            opeRand2 = opeRand2 + value
-            resultLabel.text = opeRand2
+            opeRand2 = opeRand2 + value!
+          resultLabel.text = opeRand2
 
             }
     }
+
 }
+
+
+
+

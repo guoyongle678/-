@@ -27,7 +27,8 @@ class ViewController: UIViewController {
     }
  
     @IBAction func didClicked(sender: UIButton) {
-        let value = sender.currentTitle
+        var value = sender.currentTitle
+        print(value)
         if value == "+"||value == "-"||value == "*"||value == "/" {
           opeRand3 = value!
             return
@@ -43,12 +44,13 @@ class ViewController: UIViewController {
                     result = Int(opeRand1)! * Int(opeRand2)!
             case "/":
                     result = Int(opeRand1)! / Int(opeRand2)!
+
             default:
                 result = 0
                 }
             resultLabel.text = "\(result)"
             return
-}
+            }
         else if value == "AC"{
             value = "0"
             opeRand1 = ""
@@ -61,12 +63,12 @@ class ViewController: UIViewController {
 
             opeRand1 = opeRand1 + value!
             resultLabel.text = opeRand1
-            }
+        }
         else {
             opeRand2 = opeRand2 + value!
           resultLabel.text = opeRand2
 
-            }
+        }
     }
 
 }

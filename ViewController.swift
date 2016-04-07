@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     var opeRand2: String = ""
     var opeRand3: String = ""
     
+    var isDao:Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,21 +32,21 @@ class ViewController: UIViewController {
         var value = sender.currentTitle
         print(value)
         if value == "+"||value == "-"||value == "*"||value == "/" {
-          opeRand3 = value!
+            opeRand3 = value!
+            isDao = false
             return
         }
         else if value == "=" {
-            var result = 0
+            var result = 0.0
             switch opeRand3{
             case "+":
-                    result = Int(opeRand1)! + Int(opeRand2)!
+                    result = Double(opeRand1)! + Double(opeRand2)!
             case "-":
-                    result = Int(opeRand1)! - Int(opeRand2)!
+                    result = Double(opeRand1)! - Double(opeRand2)!
             case "*":
-                    result = Int(opeRand1)! * Int(opeRand2)!
+                    result = Double(opeRand1)! * Double(opeRand2)!
             case "/":
-                    result = Int(opeRand1)! / Int(opeRand2)!
-
+                    result = Double(opeRand1)! / Double(opeRand2)!
             default:
                 result = 0
                 }
@@ -58,16 +60,25 @@ class ViewController: UIViewController {
             opeRand3 = ""
             resultLabel.text = ""
             return
-        }
-        if opeRand3 == ""  {
+        }else if value == "."{
+            if !isDao {
+                opeRand1 = opeRand1 + value!
+                resultLabel.text = opeRand1
+                isDao = true
 
-            opeRand1 = opeRand1 + value!
-            resultLabel.text = opeRand1
-        }
-        else {
-            opeRand2 = opeRand2 + value!
-          resultLabel.text = opeRand2
+            }
+            
+        }else{
+            if opeRand3 == ""  {
 
+                opeRand1 = opeRand1 + value!
+                resultLabel.text = opeRand1
+            }
+            else {
+                opeRand2 = opeRand2 + value!
+                resultLabel.text = opeRand2
+
+            }
         }
     }
 

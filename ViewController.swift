@@ -59,8 +59,10 @@ class ViewController: UIViewController {
             opeRand2 = ""
             opeRand3 = ""
             resultLabel.text = ""
+            isDao = false
             return
-        }else if value == "."{
+        }
+        else if value == "."{
             if !isDao {
                 opeRand1 = opeRand1 + value!
                 resultLabel.text = opeRand1
@@ -68,7 +70,9 @@ class ViewController: UIViewController {
 
             }
             
-        }else{
+        }
+        else
+        {
             if opeRand3 == ""  {
 
                 opeRand1 = opeRand1 + value!

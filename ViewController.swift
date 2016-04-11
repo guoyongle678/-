@@ -36,6 +36,7 @@ class ViewController: UIViewController {
             isDao = false
             return
         }
+              //
         else if value == "=" {
             var result = 0.0
             switch opeRand3{

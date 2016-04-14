@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     @IBAction func didClicked(sender: UIButton) {
         var value = sender.currentTitle
         print(value)
-        if value == "+"||value == "-"||value == "*"||value == "/" {
+        if value == "+"||value == "-"||value == "*"||value == "/"||value == "%" {
             opeRand3 = value!
             isDao = false
             return
@@ -48,6 +48,8 @@ class ViewController: UIViewController {
                     result = Double(opeRand1)! * Double(opeRand2)!
             case "/":
                     result = Double(opeRand1)! / Double(opeRand2)!
+            case "%":
+                result = Double(opeRand1)! % Double(opeRand2)!
             default:
                 result = 0
                 }

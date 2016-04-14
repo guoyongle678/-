@@ -182,6 +182,14 @@
                                     <action selector="didClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4M1-sM-3Uk"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ck7-b3-1S1">
+                                <rect key="frame" x="155" y="192" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="←"/>
+                                <connections>
+                                    <action selector="didClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b1M-dE-b02"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uqU-Ag-97H">
                                 <rect key="frame" x="32" y="118" width="256" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

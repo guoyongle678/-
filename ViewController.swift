@@ -65,6 +65,14 @@ class ViewController: UIViewController {
             isDao = false
             return
         }
+            else if value == "←" {
+            var str = results.text!;
+            if str != "" {
+                str.removeAtIndex(str.endIndex.predecessor());
+                results.text!=str;
+            }
+        }
+                
         else if value == "."{
             if !isDao {
                 opeRand1 = opeRand1 + value!
